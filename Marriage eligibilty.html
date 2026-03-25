@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Calculator</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<script>
+let sum = (a,b) =>{ 
+return a+b;
+}
+let diff = (a,b) =>{ 
+return a-b;
+}
+let mul= (a,b) =>{ 
+return a*b;
+}
+let div= (a,b) =>{ 
+return a/b;
+}
+let per= (a,b) =>{ 
+
+return a%b;
+}
+document.write("Addition:"+sum(a=40,b=20) +"<br>");
+document.write("Substraction:"+diff(a=40,b=20)+"<br>");
+document.write("Multiplication:"+mul(a=40,b=20)+"<br>");
+document.write("Division:"+div(a=40,b=20)+"<br>");
+document.write("Percentage:"+per(a=4000,b=7)+"<br>");
+</script>
+</body>
+</html>
+
+
+MARRIAGE INPUT:
+<html>
+<body>
+<h1>Eligibility for Marriage</h1>
+<script>
+let age = 18;
+let gender = "female";
+let marriage = (age,gender)=> {
+if(gender == "male" && age>=21){
+return "is eligible for marriage";
+}
+else if(gender == "female" && age>=18){
+return "is eligible for marriage";
+}
+else{
+return "is not eligible for marriage";
+}
+}
+
+document.write(`${age} and ${gender} ${marriage(age, gender)}`);
+</script>
+</body>
+</html>
