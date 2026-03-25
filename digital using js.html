@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Digital Clock</title>|
+    <style>
+        h2{
+            color: rgb(47, 255, 227);
+            font-size: 200px;
+            text-align: center;
+            background-color: black;
+        
+    
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digital Clock</h1>
+    <h2 id="Clock"></h2>
+
+    <script>
+        function Time() {
+            let now = new Date();
+
+            let Hours = now.getHours();
+            let min = now.getMinutes();
+            let Sec = now.getSeconds();
+
+            if (Hours < 10) {
+                Hours = "0" + Hours;
+            }
+            if (min < 10) {
+                min = "0" + min;
+            }
+            if (Sec < 10) {
+                Sec = "0" + Sec;
+            }
+
+            let Digital = Hours + ":" + min + ":" + Sec;
+            document.getElementById("Clock").innerHTML = Digital;
+        }
+
+        setInterval(Time, 1000);
+        Time(); // run immediately
+    </script>
+</body>
+</html>
