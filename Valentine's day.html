@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>Valentines Week</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: url(./vallllll.jpg);
+            background-size: cover;
+        }
+
+        fieldset{
+            text-align: center;
+            width: 380px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+            padding: 20px;
+        }
+
+        marquee{
+            background-color: #ffd6e5;
+            color: #c2185b;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .week{
+            color: #d81b60;
+        }
+
+        label{
+            font-size: 18px;
+        }
+
+        input{
+            width: 80%;
+            padding: 8px;
+            margin: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button{
+            width: 90px;
+            padding: 8px;
+            border: none;
+            border-radius: 20px;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .refresh{
+            background: linear-gradient(to right, #757575, #424242);
+            color: white;
+        }
+
+        .refresh:hover{
+            background: linear-gradient(to right, #616161, #212121);
+        }
+
+        .sub{
+            background: linear-gradient(to right, #ff4081, #e91e63);
+            color: white;
+        }
+
+        .sub:hover{
+            background: linear-gradient(to right, #e91e63, #c2185b);
+        }
+
+        #display{
+            margin-top: 20px;
+            font-size: 22px;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: #fce4ec;
+            color: #ad1457;
+            box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <marquee><h2>❤️ Welcome to Valentine's Week ❤️</h2></marquee>
+
+    <fieldset>
+        <h1 class="week">Valentine’s Week</h1>
+
+        <label>Enter your day number:</label><br>
+        <input type="number" id="day" placeholder="7 to 14"><br>
+
+        <button class="refresh" onclick="refresh()">Refresh</button>
+        <button class="sub" onclick="show_day()">Submit</button>
+
+        <div id="display">Result will appear here</div>
+    </fieldset>
+
+    <script>
+        function show_day(){
+            let day = document.getElementById("day").value;
+            let output = document.getElementById("display");
+
+            switch(day){
+                case "7":
+                    output.textContent = "🌹 Rose Day";
+                    break;
+                case "8":
+                    output.textContent = "💍 Proposal Day";
+                    break;
+                case "9":
+                    output.textContent = "🍫 Chocolate Day";
+                    break;
+                case "10":
+                    output.textContent = "🧸 Teddy Day";
+                    break;
+                case "11":
+                    output.textContent = "🤝 Promise Day";
+                    break;
+                case "12":
+                    output.textContent = "🫂 Hug Day";
+                    break;
+                case "13":
+                    output.textContent = "😘 Kiss Day";
+                    break;
+                case "14":
+                    output.textContent = "❤️ Valentine’s Day";
+                    break;
+                default:
+                    output.textContent = " Please enter a valid day (7–14)";
+            }
+        }
+
+        function refresh(){
+            document.getElementById("day").value = "";
+            document.getElementById("display").textContent = "Result will appear here";
+        }
+    </script>
+
+</body>
+</html>
